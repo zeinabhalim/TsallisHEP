@@ -47,7 +47,12 @@ void pptsallis() {
 // setting Colors and marker styles
    int colors[] = {kRed, kBlue, kGreen+2, kMagenta, kOrange, kCyan, kBlack, kViolet, kTeal, kPink, kGray, kSpring};
    int markers[] = {20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 33};
-
+   
+// Save parameters to a text file
+          std::ofstream outfile("Tsallisfit_parametersppTev.txt");
+              outfile << "fitting of the transverse momentum spectra of charged particles in proton-proton at Sqrt{s_NN} = 0.9,2.36,7 TeV, using Tsallis  distribution function."<<std::endl;
+              outfile << std::endl;
+              
     // Loop over each group of data sets  
     for (size_t groupIndex = 0; groupIndex < fileGroups.size(); groupIndex++) {
         c1->cd(groupIndex + 1); //to  Move around the canvas partitions
@@ -130,7 +135,28 @@ void pptsallis() {
         "#sqrt{s_{NN}} = 2.36 TeV",
         "#sqrt{s_{NN}} = 7 TeV"
     };
+       
+       // define Chi-Square , Degrees of Freedom and p-value
+        double chi2 =  tsallisFunp->GetChisquare();
+        int ndf =  tsallisFunp->GetNDF();
+        double chi2ndf =  chi2 / ndf ;
+        double pValue = TMath::Prob(chi2, ndf);
         
+        outfile << "Fitting results for p-p collision at : "<<energyLabels[i]<<", at pesudo-rapidity "<<titles[groupIndex]<<std::endl;
+       outfile << "Fitting parameters:" << std::endl;
+        outfile << "  A (Normalization): " <<  tsallisFunp->GetParameter(0) << " ± " <<  tsallisFunp->GetParError(0) << std::endl;
+        outfile << "  q (non-equilibrium index): " <<  tsallisFunp->GetParameter(1)<< " ± " << tsallisFunp->GetParError(1) << std::endl;
+       outfile <<"  T (Temperature): " <<  tsallisFunp->GetParameter(2) << " ± " <<  tsallisFunp->GetParError(2) << std::endl;
+       outfile << "  mu (Chemical pot.): " <<  tsallisFunp->GetParameter(3) << " ± " <<  tsallisFunp->GetParError(2) << std::endl;
+       
+            outfile << "Estimating statistical accuracy"<<std::endl;
+       outfile << "chi2 " << chi2<< std::endl;
+        outfile << "ndf " << ndf<< std::endl;
+       outfile << "chi2ndf " << chi2ndf<< std::endl;
+        outfile << "p-Value: " << pValue << std::endl;
+        outfile << "----------------------------------------------------------------------------------------------"<<std::endl;
+              outfile << std::endl; 
+              
          mg->SetTitle(titles[groupIndex]); // Add titles for each graph at the top
     
          leg->AddEntry(gr,  energyLabels[i] , "P");
@@ -143,6 +169,7 @@ void pptsallis() {
         mg->GetYaxis()->SetTitle("(1/(N_{evt}))*d^2(N)/d\\eta /dP _{t }");  
              
         }
+        
 
       tsallisFunp->SetLineColor(kRed);    // Set the color of fit function 
       tsallisFunp->SetLineWidth(2);
