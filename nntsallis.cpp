@@ -17,7 +17,7 @@ double TsallisFunction(double *x, double *par)
     double q = par[1];   // non-equilibrium tsallis index
     double T = par[2];   // average Temperature at freeze-out stage
     double mu = par[3];   // chemical potential
-    double y = par[4];   // rapdity parameter
+    double y = par[4];   // rapdity parameter(fixed to mid rapidity)
 
 
     return par[0] * xval * sqrt(xval * xval + mass * mass) * 
@@ -54,7 +54,7 @@ void nntsallis() {
 
 double xmin = 0.2, xmax = 3.03;
 TF1 *tsallisFunc = new TF1("fitFunc", TsallisFunction, xmin, xmax, 5);
-tsallisFunc->SetNpx(1000);
+tsallisFunc->SetNpx(2000);
 // Save parameters to a text file
           std::ofstream outfile("Tsallisfit_parametersxexe.txt");
               outfile << "fitting of the transverse momentum spectra of charged particles in Xe-Xe at Sqrt{s_NN} = 5.44 TeV, using Tsallis  distribution function."<<std::endl;
@@ -98,7 +98,28 @@ tsallisFunc->SetNpx(1000);
         "30-40%", "40-50%", "50-60%", "60-70%"};
         int colors[sizeof(filenames.size())] = {kRed, kBlue, kGreen + 2, kMagenta,
                             kOrange + 7, kCyan + 2, kViolet, kBlack};
-                            
+            // define Chi-Square , Degrees of Freedom and p-value
+        double chi2 =  tsallisFunc->GetChisquare();
+        int ndf =  tsallisFunc->GetNDF();
+        double chi2ndf = (ndf > 0) ? chi2 / ndf : 999;
+// Print out the fitting parameters 
+
+       // outfile << "Fitting results for centerality: "<<names[1]<<std::endl;
+       outfile << "Fitting parameters:" << std::endl;
+        outfile << "  A (Normalization): " << tsallisFunc->GetParameter(0) << " ± " << tsallisFunc->GetParError(0) << std::endl;
+        outfile << "  q (non-equilibrium index): " << tsallisFunc->GetParameter(1)<< " ± " <<tsallisFunc->GetParError(1) << std::endl;
+       outfile <<"  T (Temperature): " << tsallisFunc->GetParameter(2) << " ± " << tsallisFunc->GetParError(2) << std::endl;
+       outfile << "  mu (Chemical pot.): " << tsallisFunc->GetParameter(3) << " ± " << tsallisFunc->GetParError(2) << std::endl;
+
+            outfile << "Estimating statistical accuracy"<<std::endl;
+       outfile << "chi2 " << chi2<< std::endl;
+        outfile << "ndf " << ndf<< std::endl;
+       outfile << "chi2ndf " << chi2ndf<< std::endl;
+if (chi2ndf > 0.5 && chi2ndf < 8.0) {
+         outfile << " VAILD FITTING   "<<std::endl;}
+         else{ outfile << "                                          INVAILD FITTING                              "<<std::endl;}
+        outfile << "----------------------------------------------------------------------------------------------"<<std::endl;
+              outfile << std::endl;                  
 
          for (int i = 0; i <= filenames.size(); i++) {
          // Set color and marker style based on the file index
@@ -110,7 +131,7 @@ tsallisFunc->SetNpx(1000);
         }
          
         // Set the points and the errors (only y-error, x-error is 0)
-        for (int i = 0; i < n_points; ++i) {
+        for (int i = 0; i <= n_points; ++i) {
             graph->SetPoint(i, x_data[i], y_data[i]);
             graph->SetPointError(i,0,y_error[i]);  // Only y-error, x-error is 0
         }
@@ -126,20 +147,19 @@ tsallisFunc->SetNpx(1000);
     graph->GetXaxis()->SetLimits(0.175, 3.2);  // X-axis range
     graph->SetMinimum(0.22);  // Y-axis lower limit (prevent log scale issues)
     graph->SetMaximum(1e5);   // Y-axis upper limit
-    
-
+   
 
  if (file_index == 0) {
         tsallisFunc->SetParLimits(0,0.01,4.0); // Initial guess for A 
-        tsallisFunc->SetParLimits(1,1.11, 1.16);//Initial guess for q 
-        tsallisFunc->SetParLimits(2, 0.2,0.45); // Initial guess for T 
+        tsallisFunc->SetParLimits(1,1.11, 1.15);//Initial guess for q 
+        tsallisFunc->SetParLimits(2, 0.3,0.55); // Initial guess for T 
         tsallisFunc->SetParLimits(3, 0.01,3.0); // Initial guess for mu 
         tsallisFunc->FixParameter(4, 0.0); // Initial guess for y 
         tsallisFunc->SetParNames("Norm", "q (Non-Extensive)", "T (Temperature)", "mu (Chemical Pot.)","ripdity");
         
         } else if (file_index == 1) {
        tsallisFunc->SetParLimits(0,0.1,4.0); 
-        tsallisFunc->SetParLimits(1,1.11, 1.15);
+        tsallisFunc->SetParLimits(1,1.11, 1.145);
         tsallisFunc->SetParLimits(2, 0.2,0.45); 
         tsallisFunc->SetParLimits(3, 0.01,3.0); 
         tsallisFunc->FixParameter(4, 0.0); 
@@ -147,7 +167,7 @@ tsallisFunc->SetNpx(1000);
         }
          else if(file_index == 2) {
         tsallisFunc->SetParLimits(0,0.1,4.0); 
-        tsallisFunc->SetParLimits(1,1.1, 1.15);
+        tsallisFunc->SetParLimits(1,1.1, 1.145);
         tsallisFunc->SetParLimits(2, 0.2,0.45); 
         tsallisFunc->SetParLimits(3, 0.01,3.0); 
         tsallisFunc->FixParameter(4, 0.0); 
@@ -178,37 +198,18 @@ tsallisFunc->SetNpx(1000);
         }
         
          
-
-               
- 
-        graph->Fit(tsallisFunc, "R");  // Fit the graph with the Tsallis function
-
-        // define Chi-Square , Degrees of Freedom and p-value
-        double chi2 =  tsallisFunc->GetChisquare();
-        int ndf =  tsallisFunc->GetNDF();
-        double chi2ndf =  chi2 / ndf ;
-        double pValue = TMath::Prob(chi2, ndf);
-
-        // Print out the fitting parameters 
-        outfile << "Fitting results for centerality: "<<names[file_index]<<std::endl;
-       outfile << "Fitting parameters:" << std::endl;
-        outfile << "  A (Normalization): " << tsallisFunc->GetParameter(0) << " ± " << tsallisFunc->GetParError(0) << std::endl;
-        outfile << "  q (non-equilibrium index): " << tsallisFunc->GetParameter(1)<< " ± " <<tsallisFunc->GetParError(1) << std::endl;
-       outfile <<"  T (Temperature): " << tsallisFunc->GetParameter(2) << " ± " << tsallisFunc->GetParError(2) << std::endl;
-       outfile << "  mu (Chemical pot.): " << tsallisFunc->GetParameter(3) << " ± " << tsallisFunc->GetParError(2) << std::endl;
+    
        
-            outfile << "Estimating statistical accuracy"<<std::endl;
-       outfile << "chi2 " << chi2<< std::endl;
-        outfile << "ndf " << ndf<< std::endl;
-       outfile << "chi2ndf " << chi2ndf<< std::endl;
-        outfile << "p-Value: " << pValue << std::endl;
-        outfile << "----------------------------------------------------------------------------------------------"<<std::endl;
-              outfile << std::endl;
+     graph->Fit(tsallisFunc, "R");  // Fit the graph with the Tsallis function
+
+
+        
        
        graph->SetTitle("Xe Xe --> Charged X ,  #sqrt{s_{NN}} =5.44 TeV "); 
        }
      
-       
+      
+        
     leg->AddEntry(tsallisFunc, "Tsallis Fit", "l");
     leg->Draw();
 }
