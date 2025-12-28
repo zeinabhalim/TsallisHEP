@@ -1,0 +1,106 @@
+fitting of the transverse momentum spectra of charged particles in Xe-Xe at Sqrt{s_NN} = 5.44 TeV, using Tsallis  distribution function.
+
+Fitting results for centerality: 0-5%
+Fitting parameters:
+  A (Normalization): 2.61293 ± 0.0833065
+  q (non-equilibrium index): 1.11607 ± 0.00106881
+  T (Temperature): 0.444587 ± 0.00212755
+  mu (Chemical pot.): 2.79271 ± 0.00212755
+Estimating statistical accuracy
+chi2 257.531
+ndf 28
+chi2ndf 9.19754
+p-Value: 5.71179e-39
+----------------------------------------------------------------------------------------------
+
+Fitting results for centerality: 5-10%
+Fitting parameters:
+  A (Normalization): 2.30781 ± 1.22757
+  q (non-equilibrium index): 1.11946 ± 0.00179544
+  T (Temperature): 0.447566 ± 0.172772
+  mu (Chemical pot.): 2.76728 ± 0.172772
+Estimating statistical accuracy
+chi2 257.547
+ndf 28
+chi2ndf 9.19809
+p-Value: 5.67196e-39
+----------------------------------------------------------------------------------------------
+
+Fitting results for centerality: 10-20%
+Fitting parameters:
+  A (Normalization): 1.84084 ± 0.414214
+  q (non-equilibrium index): 1.12185 ± 0.00145908
+  T (Temperature): 0.448683 ± 0.0227861
+  mu (Chemical pot.): 2.74474 ± 0.0227861
+Estimating statistical accuracy
+chi2 262.456
+ndf 28
+chi2ndf 9.37344
+p-Value: 6.21353e-40
+----------------------------------------------------------------------------------------------
+
+Fitting results for centerality: 20-30%
+Fitting parameters:
+  A (Normalization): 3.47668 ± 0.119146
+  q (non-equilibrium index): 1.12261 ± 0.00119132
+  T (Temperature): 0.393974 ± 0.00204402
+  mu (Chemical pot.): 2.2978 ± 0.00204402
+Estimating statistical accuracy
+chi2 245.456
+ndf 28
+chi2ndf 8.76627
+p-Value: 1.28866e-36
+----------------------------------------------------------------------------------------------
+
+Fitting results for centerality: 30-40%
+Fitting parameters:
+  A (Normalization): 4 ± 0.00788214
+  q (non-equilibrium index): 1.11255 ± 0.000655502
+  T (Temperature): 0.35 ± 7.76465e-05
+  mu (Chemical pot.): 2.04757 ± 7.76465e-05
+Estimating statistical accuracy
+chi2 330.326
+ndf 28
+chi2ndf 11.7973
+p-Value: 2.21135e-53
+----------------------------------------------------------------------------------------------
+
+Fitting results for centerality: 40-50%
+Fitting parameters:
+  A (Normalization): 3.26233 ± 0.116187
+  q (non-equilibrium index): 1.12664 ± 0.00130828
+  T (Temperature): 0.349997 ± 0.149593
+  mu (Chemical pot.): 1.94384 ± 0.149593
+Estimating statistical accuracy
+chi2 203.296
+ndf 28
+chi2ndf 7.26058
+p-Value: 1.62743e-28
+----------------------------------------------------------------------------------------------
+
+Fitting results for centerality: 50-60%
+Fitting parameters:
+  A (Normalization): 1.6559 ± 0.0637868
+  q (non-equilibrium index): 1.12801 ± 0.00120138
+  T (Temperature): 0.35 ± 0.0755845
+  mu (Chemical pot.): 1.95767 ± 0.0755845
+Estimating statistical accuracy
+chi2 197.259
+ndf 28
+chi2ndf 7.04495
+p-Value: 2.26086e-27
+----------------------------------------------------------------------------------------------
+
+Fitting results for centerality: 60-70%
+Fitting parameters:
+  A (Normalization): 0.770317 ± 0.0222273
+  q (non-equilibrium index): 1.13018 ± 0.00116819
+  T (Temperature): 0.35 ± 0.0213679
+  mu (Chemical pot.): 1.96505 ± 0.0213679
+Estimating statistical accuracy
+chi2 170.071
+ndf 28
+chi2ndf 6.07397
+p-Value: 2.698e-22
+----------------------------------------------------------------------------------------------
+
