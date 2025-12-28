@@ -1,0 +1,184 @@
+Fitting of the transverse momentum spectra of charged particles in proton-proton
+using Tsallis distribution function with combined errors (statistical + systematic)
+Data format: x y stat_error sys_error
+
+==================================================================
+Energy: #sqrt{s_{NN}} = 7.7 GeV, Pseudorapidity: 0.0< #eta<0.2
+Data points: 18
+==================================================================
+Fit Parameters:
+  Norm:            1.277912 ± 2.126700
+  q (Non-extensive): 1.056015 ± 0.006518
+  T (Temperature):   0.120007 ± 0.178607
+  μ (Chemical Pot.): 0.561583 ± 0.183083
+  Rapidity (fixed):  0.000000
+
+Goodness of Fit:
+  χ²/NDF:                0.549137
+  NDF:                   12
+
+==================================================================
+Energy: #sqrt{s_{NN}} = 12.3 GeV, Pseudorapidity: 0.0< #eta<0.2
+Data points: 18
+==================================================================
+Fit Parameters:
+  Norm:            1.503097 ± 0.241716
+  q (Non-extensive): 1.061627 ± 0.004862
+  T (Temperature):   0.123075 ± 0.001452
+  μ (Chemical Pot.): 0.570366 ± 0.019863
+  Rapidity (fixed):  0.000000
+
+Goodness of Fit:
+  χ²/NDF:                0.852784
+  NDF:                   12
+
+==================================================================
+Energy: #sqrt{s_{NN}} = 17.3 GeV, Pseudorapidity: 0.0< #eta<0.2
+Data points: 18
+==================================================================
+Fit Parameters:
+  Norm:            1.581080 ± 0.323076
+  q (Non-extensive): 1.066237 ± 0.005627
+  T (Temperature):   0.124016 ± 0.001916
+  μ (Chemical Pot.): 0.577100 ± 0.025522
+  Rapidity (fixed):  0.000000
+
+Goodness of Fit:
+  χ²/NDF:                0.231179
+  NDF:                   12
+
+==================================================================
+Energy: #sqrt{s_{NN}} = 7.7 GeV, Pseudorapidity: 0.2< #eta<0.4
+Data points: 18
+==================================================================
+Fit Parameters:
+  Norm:            1.408295 ± 0.317966
+  q (Non-extensive): 1.049947 ± 0.006539
+  T (Temperature):   0.124842 ± 0.001794
+  μ (Chemical Pot.): 0.567285 ± 0.028386
+  Rapidity (fixed):  0.300000
+
+Goodness of Fit:
+  χ²/NDF:                0.457507
+  NDF:                   12
+
+==================================================================
+Energy: #sqrt{s_{NN}} = 12.3 GeV, Pseudorapidity: 0.2< #eta<0.4
+Data points: 18
+==================================================================
+Fit Parameters:
+  Norm:            1.533159 ± 0.253733
+  q (Non-extensive): 1.063167 ± 0.004956
+  T (Temperature):   0.128434 ± 0.001580
+  μ (Chemical Pot.): 0.585169 ± 0.021343
+  Rapidity (fixed):  0.300000
+
+Goodness of Fit:
+  χ²/NDF:                0.233134
+  NDF:                   12
+
+==================================================================
+Energy: #sqrt{s_{NN}} = 17.3 GeV, Pseudorapidity: 0.2< #eta<0.4
+Data points: 18
+==================================================================
+Fit Parameters:
+  Norm:            1.626860 ± 0.338819
+  q (Non-extensive): 1.068394 ± 0.005533
+  T (Temperature):   0.130018 ± 0.002103
+  μ (Chemical Pot.): 0.593909 ± 0.027295
+  Rapidity (fixed):  0.300000
+
+Goodness of Fit:
+  χ²/NDF:                0.432579
+  NDF:                   12
+
+==================================================================
+Energy: #sqrt{s_{NN}} = 7.7 GeV, Pseudorapidity: 0.4< #eta<0.6
+Data points: 18
+==================================================================
+Fit Parameters:
+  Norm:            1.461137 ± 0.349800
+  q (Non-extensive): 1.051334 ± 0.006967
+  T (Temperature):   0.130844 ± 0.002059
+  μ (Chemical Pot.): 0.584318 ± 0.031598
+  Rapidity (fixed):  0.500000
+
+Goodness of Fit:
+  χ²/NDF:                0.891955
+  NDF:                   12
+
+==================================================================
+Energy: #sqrt{s_{NN}} = 12.3 GeV, Pseudorapidity: 0.4< #eta<0.6
+Data points: 18
+==================================================================
+Fit Parameters:
+  Norm:            1.604095 ± 0.278841
+  q (Non-extensive): 1.056011 ± 0.005041
+  T (Temperature):   0.135730 ± 0.001617
+  μ (Chemical Pot.): 0.611178 ± 0.023719
+  Rapidity (fixed):  0.500000
+
+Goodness of Fit:
+  χ²/NDF:                0.619372
+  NDF:                   12
+
+==================================================================
+Energy: #sqrt{s_{NN}} = 17.3 GeV, Pseudorapidity: 0.4< #eta<0.6
+Data points: 18
+==================================================================
+Fit Parameters:
+  Norm:            1.684284 ± 0.358713
+  q (Non-extensive): 1.068548 ± 0.005795
+  T (Temperature):   0.137951 ± 0.002285
+  μ (Chemical Pot.): 0.618520 ± 0.029654
+  Rapidity (fixed):  0.500000
+
+Goodness of Fit:
+  χ²/NDF:                0.294982
+  NDF:                   12
+
+==================================================================
+Energy: #sqrt{s_{NN}} = 7.7 GeV, Pseudorapidity: 0.6< #eta<0.8
+Data points: 18
+==================================================================
+Fit Parameters:
+  Norm:            1.626302 ± 0.414861
+  q (Non-extensive): 1.038225 ± 0.006714
+  T (Temperature):   0.144293 ± 0.002140
+  μ (Chemical Pot.): 0.613373 ± 0.037279
+  Rapidity (fixed):  0.700000
+
+Goodness of Fit:
+  χ²/NDF:                0.720509
+  NDF:                   12
+
+==================================================================
+Energy: #sqrt{s_{NN}} = 12.3 GeV, Pseudorapidity: 0.6< #eta<0.8
+Data points: 18
+==================================================================
+Fit Parameters:
+  Norm:            1.759200 ± 0.328778
+  q (Non-extensive): 1.052172 ± 0.005039
+  T (Temperature):   0.147685 ± 0.001828
+  μ (Chemical Pot.): 0.637847 ± 0.027821
+  Rapidity (fixed):  0.700000
+
+Goodness of Fit:
+  χ²/NDF:                0.533987
+  NDF:                   12
+
+==================================================================
+Energy: #sqrt{s_{NN}} = 17.3 GeV, Pseudorapidity: 0.6< #eta<0.8
+Data points: 18
+==================================================================
+Fit Parameters:
+  Norm:            1.863763 ± 0.412058
+  q (Non-extensive): 1.064940 ± 0.005561
+  T (Temperature):   0.150592 ± 0.002526
+  μ (Chemical Pot.): 0.648907 ± 0.033739
+  Rapidity (fixed):  0.700000
+
+Goodness of Fit:
+  χ²/NDF:                0.120456
+  NDF:                   12
+
