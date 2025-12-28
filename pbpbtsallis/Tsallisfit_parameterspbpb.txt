@@ -1,0 +1,156 @@
+Fitting of the transverse momentum spectra of charged particles in Pb-Pb at √s_NN = 2.76 TeV
+Using Tsallis distribution function with combined errors (statistical + systematic)
+Data format: x  y  stat_error  sys_error
+
+==================================================================
+Centrality: 0-5%
+Data points: 28
+==================================================================
+Fit Parameters:
+  Norm:            6.985133 ± 0.235340
+  q (Non-extensive): 1.140672 ± 0.001477
+  T (Temperature):   0.448797 ± 0.002638
+  μ (Chemical Pot.): 2.478797 ± 0.012737
+  Rapidity (fixed):  0.000000 (fixed)
+
+Goodness of Fit:
+  χ² (stat + sys errors):       66.258847
+  χ²/NDF (total errors):        2.760785
+  NDF:                          24
+
+Fit Quality Assessment:
+  Using total errors (stat+sys): Good (χ²/NDF < 3.0)
+
+==================================================================
+Centrality: 5-10%
+Data points: 28
+==================================================================
+Fit Parameters:
+  Norm:            5.994449 ± 0.196278
+  q (Non-extensive): 1.143303 ± 0.001416
+  T (Temperature):   0.450898 ± 0.002541
+  μ (Chemical Pot.): 2.462571 ± 0.012315
+  Rapidity (fixed):  0.000000 (fixed)
+
+Goodness of Fit:
+  χ² (stat + sys errors):       69.456695
+  χ²/NDF (total errors):        2.894029
+  NDF:                          24
+
+Fit Quality Assessment:
+  Using total errors (stat+sys): Good (χ²/NDF < 3.0)
+
+==================================================================
+Centrality: 10-20%
+Data points: 28
+==================================================================
+Fit Parameters:
+  Norm:            4.932243 ± 0.154350
+  q (Non-extensive): 1.145000 ± 0.029809
+  T (Temperature):   0.447390 ± 0.001961
+  μ (Chemical Pot.): 2.421910 ± 0.013233
+  Rapidity (fixed):  0.000000 (fixed)
+
+Goodness of Fit:
+  χ² (stat + sys errors):       71.894249
+  χ²/NDF (total errors):        2.995594
+  NDF:                          24
+
+Fit Quality Assessment:
+  Using total errors (stat+sys): Good (χ²/NDF < 3.0)
+
+==================================================================
+Centrality: 20-30%
+Data points: 28
+==================================================================
+Fit Parameters:
+  Norm:            3.556457 ± 0.120466
+  q (Non-extensive): 1.145869 ± 0.003493
+  T (Temperature):   0.441305 ± 0.002543
+  μ (Chemical Pot.): 2.379145 ± 0.012922
+  Rapidity (fixed):  0.000000 (fixed)
+
+Goodness of Fit:
+  χ² (stat + sys errors):       67.117405
+  χ²/NDF (total errors):        2.796559
+  NDF:                          24
+
+Fit Quality Assessment:
+  Using total errors (stat+sys): Good (χ²/NDF < 3.0)
+
+==================================================================
+Centrality: 30-40%
+Data points: 28
+==================================================================
+Fit Parameters:
+  Norm:            2.415154 ± 0.084119
+  q (Non-extensive): 1.145690 ± 0.001712
+  T (Temperature):   0.432484 ± 0.002610
+  μ (Chemical Pot.): 2.335224 ± 0.013072
+  Rapidity (fixed):  0.000000 (fixed)
+
+Goodness of Fit:
+  χ² (stat + sys errors):       66.737058
+  χ²/NDF (total errors):        2.780711
+  NDF:                          24
+
+Fit Quality Assessment:
+  Using total errors (stat+sys): Good (χ²/NDF < 3.0)
+
+==================================================================
+Centrality: 40-50%
+Data points: 28
+==================================================================
+Fit Parameters:
+  Norm:            1.544038 ± 0.054336
+  q (Non-extensive): 1.145531 ± 0.001506
+  T (Temperature):   0.422489 ± 0.002611
+  μ (Chemical Pot.): 2.287567 ± 0.012860
+  Rapidity (fixed):  0.000000 (fixed)
+
+Goodness of Fit:
+  χ² (stat + sys errors):       65.150153
+  χ²/NDF (total errors):        2.714590
+  NDF:                          24
+
+Fit Quality Assessment:
+  Using total errors (stat+sys): Good (χ²/NDF < 3.0)
+
+==================================================================
+Centrality: 50-60%
+Data points: 28
+==================================================================
+Fit Parameters:
+  Norm:            1.893412 ± 0.067265
+  q (Non-extensive): 1.145323 ± 0.001559
+  T (Temperature):   0.369498 ± 0.002348
+  μ (Chemical Pot.): 1.948789 ± 0.012295
+  Rapidity (fixed):  0.000000 (fixed)
+
+Goodness of Fit:
+  χ² (stat + sys errors):       63.562915
+  χ²/NDF (total errors):        2.648455
+  NDF:                          24
+
+Fit Quality Assessment:
+  Using total errors (stat+sys): Good (χ²/NDF < 3.0)
+
+==================================================================
+Centrality: 60-70%
+Data points: 28
+==================================================================
+Fit Parameters:
+  Norm:            1.006218 ± 0.034742
+  q (Non-extensive): 1.145028 ± 0.001526
+  T (Temperature):   0.359076 ± 0.002220
+  μ (Chemical Pot.): 1.903799 ± 0.011661
+  Rapidity (fixed):  0.000000 (fixed)
+
+Goodness of Fit:
+  χ² (stat + sys errors):       60.836470
+  χ²/NDF (total errors):        2.534853
+  NDF:                          24
+
+Fit Quality Assessment:
+  Using total errors (stat+sys): Good (χ²/NDF < 3.0)
+
